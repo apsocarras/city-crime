@@ -15,15 +15,6 @@ _This repo contains and builds off my work for a [team project](https://github.c
 
 ![Chicago/Denver](img/v3_ERD.resized.png)
 
-### Datasets Used
-
-[Crimes in Chicago](https://www.kaggle.com/datasets/onlyrohit/crimes-in-chicago) (only using years 2018-2022)
-
-[Chicago PD Police Beats](https://data.cityofchicago.org/Public-Safety/Boundaries-Police-Beats-current-/aerh-rz74) (GeoJSON)
-
-[Denver crime data](https://www.kaggle.com/datasets/paultimothymooney/denver-crime-data)
-
-
 ### Technologies Used
 
 * Python
@@ -32,8 +23,17 @@ _This repo contains and builds off my work for a [team project](https://github.c
 * DBT
 * Looker Studio
 
+### Datasets Used
+
+* [Crimes in Chicago](https://www.kaggle.com/datasets/onlyrohit/crimes-in-chicago) (only using years 2018-2022)
+
+* [Chicago PD Police Beats](https://data.cityofchicago.org/Public-Safety/Boundaries-Police-Beats-current-/aerh-rz74) (GeoJSON)
+
+* [Denver crime data](https://www.kaggle.com/datasets/paultimothymooney/denver-crime-data)
+
+
 ### Setup/Installation
-The Looker studio dashboard created from this pipeline is publicly accessible [here](https://datastudio.google.com/reporting/d14cea99-515b-40f4-a3da-bb06626ad1ad).
+The Looker Studio dashboard created from this pipeline is publicly accessible [here](https://datastudio.google.com/reporting/d14cea99-515b-40f4-a3da-bb06626ad1ad).
 
 To run the files in this repo yourself, first create a GCP project and two BigQuery datasets (schemas) called `chicago` and `denver`. Be sure to create a service account with a credential file for the project. 
 
