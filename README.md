@@ -34,9 +34,8 @@ _This repo contains and builds off my work for a [team project](https://github.c
 
 ### Setup/Installation
 The Looker studio dashboard created from this pipeline is publicly accessible [here](https://datastudio.google.com/reporting/d14cea99-515b-40f4-a3da-bb06626ad1ad).
-To run the files in this repo yourself, first create a GCP project and two BigQuery datasets (schemas) called `chicago` and `denver`. Be sure to create a service account with a credential file for the project. 
 
-Download the datasets to the appropriate subdirectories (`./data/chicago/` and `./data/denver/`).
+To run the files in this repo yourself, first create a GCP project and two BigQuery datasets (schemas) called `chicago` and `denver`. Be sure to create a service account with a credential file for the project. 
 
 Then run the following commands: 
 
@@ -55,6 +54,10 @@ source venv/bin/activate
 # Install required packages 
 pip install -r requirements.txt
 ```
+
+Next, download the datasets to the appropriate subdirectories (`./data/chicago/` and `./data/denver/`).
+
+
 Lastly, add the following block to your `.dbt/profiles.yml` file in your home directory: 
 ```yaml
 city_dbt:
