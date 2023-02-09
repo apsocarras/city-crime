@@ -53,6 +53,10 @@ source venv/bin/activate
 
 # Install required packages 
 pip install -r requirements.txt
+
+# Make data directory 
+mkdir data 
+mkdir data/chicago data/denver
 ```
 
 Next, download the datasets to the appropriate subdirectories (`./data/chicago/` and `./data/denver/`).
