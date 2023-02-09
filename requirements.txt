@@ -3,4 +3,3 @@ jupyterlab
 google-cloud-bigquery
 db-dtypes
 dbt-bigquery
-kaggle
