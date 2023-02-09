@@ -2,9 +2,9 @@
 
 #### By Alejandro Socarras
 
-###  _Exploring Crime in Major US Cities_
+<!-- ###  _Exploring Crime in Major US Cities_ -->
 
-#### Creating basic ELT pipelines using city crime data sourced from public kaggle datasets.
+### Basic ELT pipeline using city crime data from Kaggle
 
 _This repo contains and builds off my work for a [team project](https://github.com/apsocarras/team-week2) at [Epicodus](https://www.epicodus.com/)_. 
 
@@ -17,9 +17,12 @@ _This repo contains and builds off my work for a [team project](https://github.c
 
 ### Datasets Used
 
-https://www.kaggle.com/datasets/onlyrohit/crimes-in-chicago
+[Crimes in Chicago](https://www.kaggle.com/datasets/onlyrohit/crimes-in-chicago) (only using years 2018-2022)
 
-https://www.kaggle.com/datasets/paultimothymooney/denver-crime-data
+[Chicago PD Police Beats](https://data.cityofchicago.org/Public-Safety/Boundaries-Police-Beats-current-/aerh-rz74) (GeoJSON)
+
+[Denver crime data](https://www.kaggle.com/datasets/paultimothymooney/denver-crime-data)
+
 
 ### Technologies Used
 
@@ -30,9 +33,10 @@ https://www.kaggle.com/datasets/paultimothymooney/denver-crime-data
 * Looker Studio
 
 ### Setup/Installation
-The GCP project I created for this repo is publicly available at __(ADD-LINK)__. 
-
+The Looker studio dashboard created from this pipeline is publicly accessible [here](https://datastudio.google.com/reporting/d14cea99-515b-40f4-a3da-bb06626ad1ad).
 To run the files in this repo yourself, first create a GCP project and two BigQuery datasets (schemas) called `chicago` and `denver`. Be sure to create a service account with a credential file for the project. 
+
+Download the datasets to the appropriate subdirectories (`./data/chicago/` and `./data/denver/`).
 
 Then run the following commands: 
 
@@ -59,22 +63,22 @@ city_dbt:
       dataset: chicago
       job_execution_timeout_seconds: 300
       job_retries: 1
-      keyfile: </path/to/your/bigquery/credential/file>
+      keyfile: </path/to/your/google/credential/file>
       location: US
       method: service-account
       priority: interactive
-      project: <name-of-your-project>
+      project: <name-of-your-gcp-project>
       threads: 10
       type: bigquery
     denver:
       dataset: denver
       job_execution_timeout_seconds: 300
       job_retries: 1
-      keyfile: </path/to/your/bigquery/credential/file>
+      keyfile: </path/to/your/google/credential/file>
       location: US
       method: service-account
       priority: interactive
-      project: <name-of-your-project>
+      project: <name-of-your-gcp-project>
       threads: 10
       type: bigquery
   target: chicago
