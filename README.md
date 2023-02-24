@@ -1,6 +1,6 @@
 # _city-crime_ 
 
-#### By Alejandro Socarras
+#### By [Alejandro Socarras](https://alexsocarras.com)
 
 <!-- ###  _Exploring Crime in Major US Cities_ -->
 
